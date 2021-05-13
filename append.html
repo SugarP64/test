@@ -1,0 +1,22 @@
+<p>用紙を選択 (必須)
+	<select id="print">
+		<option>おみくじ</option>
+		<option>花札</option>
+		<option>麻雀牌</option>
+	</select>
+</p>
+
+<div id="img_wrap"></div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script>
+$("print").on("change",function(){
+var elem = '';	//連結のため空文字で初期化
+for( let i=0 ; i<7 ; i++){
+	elem += 'img class="product" src="' + i + '.png">';
+}
+
+$('#img_wrap').html(elem);
+})
+</script>
+
